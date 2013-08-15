@@ -16,6 +16,8 @@
 		      smex
 		      yasnippet
 		      ace-jump-mode
+		      magit
+		      rvm
 		      ruby-block
 		      )
   "A list of packages to ensure are installed at launch.")

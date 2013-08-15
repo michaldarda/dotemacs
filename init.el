@@ -39,4 +39,3 @@
 (require 'init-idomenu)
 (require 'init-yasnippet)
 (require 'init-ace-jump-mode)
-(require 'go-to-symbol)

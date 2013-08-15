@@ -47,4 +47,4 @@
 (global-set-key "\C-cs" 'ido-goto-symbol)
 (global-set-key "\C-cp" 'mine-goto-symbol-at-point)
 
-(provide 'init-idoimenu)
+(provide 'init-idomenu)

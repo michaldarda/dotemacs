@@ -36,7 +36,7 @@
 (require 'init-theme)
 (require 'init-ruby)
 (require 'init-ido)
-(require 'init-imenu)
+(require 'init-idomenu)
 (require 'init-yasnippet)
 (require 'init-ace-jump-mode)
 (require 'go-to-symbol)

@@ -17,14 +17,18 @@
 		      yasnippet
 		      ace-jump-mode
 		      magit
-		      rvm
-		      ruby-block
+		      helm
+          inf-ruby
+          ruby-compilation
+		      flymake-ruby
+		      yaml-mode
+          rhtml-mode
+		      coffee-mode
 		      )
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
-;; end packages
 
 (provide 'init-package)

@@ -18,12 +18,14 @@
 		      ace-jump-mode
 		      magit
 		      helm
+          helm-projectile
           inf-ruby
           ruby-compilation
 		      flymake-ruby
 		      yaml-mode
           rhtml-mode
 		      coffee-mode
+          projectile
 		      )
   "A list of packages to ensure are installed at launch.")
 

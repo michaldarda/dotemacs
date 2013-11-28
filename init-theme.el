@@ -1,3 +1,3 @@
-(require 'color-theme-sanityinc-tomorrow)
+(require 'twilight-theme)
 
 (provide 'init-theme)

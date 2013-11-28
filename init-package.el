@@ -9,25 +9,26 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(
-		      twilight-theme
-		      ido
-		      idomenu
-		      smex
-		      yasnippet
-		      ace-jump-mode
-		      magit
-		      helm
-          helm-projectile
-          inf-ruby
-          ruby-compilation
-		      flymake-ruby
-		      yaml-mode
-          rhtml-mode
-		      coffee-mode
-          projectile
-		      )
-  "A list of packages to ensure are installed at launch.")
+(defvar my-packages '(twilight-theme
+                      ido
+                      idomenu
+                      smex
+                      yasnippet
+                      ace-jump-mode
+                      magit
+                      helm
+                      helm-projectile
+                      inf-ruby
+                      ruby-compilation
+                      flymake-ruby
+                      yaml-mode
+                      rhtml-mode
+                      rspec-mode
+                      coffee-mode
+                      projectile
+                      auto-complete
+                      flyspell)
+ " A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

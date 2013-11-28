@@ -22,6 +22,8 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+(setq indent-line-function 'insert-tab)
+
 (fset 'yes-or-no-p 'y-or-n-p)
 (blink-cursor-mode t)
 (column-number-mode t)
@@ -31,6 +33,8 @@
 ;; Bigger Initial frame
 (add-to-list 'default-frame-alist '(height . 55))
 (add-to-list 'default-frame-alist '(width . 200))
+
+(setq default-directory "~/")
 
 ;; stay the rubbish files away from my projects
 (setq backup-directory-alist
@@ -45,6 +49,8 @@
 ;; command should be meta
 (setq ns-command-modifier 'meta)
 
+(setq x-select-enable-clipboard t)
+
 (require 'functions)
 (require 'init-package)
 (require 'init-theme)
@@ -55,3 +61,5 @@
 (require 'init-yaml)
 (require 'init-sml)
 (require 'init-projectile)
+(require 'init-auto-complete)
+(require 'multiple-cursors)

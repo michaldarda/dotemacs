@@ -1,5 +1,7 @@
+;; to myself
 ;; don't include if you don't know what something do
 ;; include only absolutely nessesary plugins and features
+;; remember to keep dotfiles as clean as possible
 
 (setq dotfiles-dir "~/.emacs.d/")
 (setq code-dir "~/Code/")
@@ -63,3 +65,4 @@
 (require 'init-projectile)
 (require 'init-auto-complete)
 (require 'multiple-cursors)
+(require 'rspec-mode)

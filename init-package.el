@@ -20,6 +20,7 @@
                       helm-projectile
                       inf-ruby
                       ruby-compilation
+                      enh-ruby-mode
                       flymake-ruby
                       yaml-mode
                       rhtml-mode
@@ -27,6 +28,8 @@
                       coffee-mode
                       projectile
                       auto-complete
+                      helm-themes
+                      multiple-cursors
                       flyspell)
  " A list of packages to ensure are installed at launch.")
 

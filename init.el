@@ -32,7 +32,7 @@
 (set-fringe-style -1)
 (tooltip-mode -1)
 
-(setq-default cursor-type '(bar . 1))
+;(setq-default cursor-type '(bar . 1))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -57,10 +57,9 @@
 
 (setq x-select-enable-clipboard t)
 
-(set-face-background 'cursor "white")
-
 (require 'functions)
 (require 'init-package)
+(require 'init-el-get)
 (require 'init-theme)
 (require 'init-ruby)
 (require 'init-yasnippet)

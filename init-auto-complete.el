@@ -1,6 +1,7 @@
 (require 'auto-complete-config)
 
 (ac-config-default)
+
 (setq ac-ignore-case nil)
 
 ;; dirty fix for having AC everywhere
@@ -9,6 +10,9 @@
                        (if (not (minibufferp (current-buffer)))
                          (auto-complete-mode 1))
                        ))
+
 (real-global-auto-complete-mode t)
+
+(setq ac-source-yasnippet nil)
 
 (provide 'init-auto-complete)

@@ -9,12 +9,9 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(twilight-theme
-                      ido
-                      idomenu
-                      smex
+(defvar my-packages '(
+                      twilight-theme
                       yasnippet
-                      ace-jump-mode
                       magit
                       helm
                       helm-projectile
@@ -30,10 +27,8 @@
                       auto-complete
                       helm-themes
                       multiple-cursors
-                      flyspell
-                      fiplr
                       )
- " A list of packages to ensure are installed at launch.")
+  " A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

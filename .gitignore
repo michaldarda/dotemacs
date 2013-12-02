@@ -3,6 +3,7 @@
 .DS_Store
 /eshell
 /elpa
+/el-get
 /auto-save-list
 *.eld
 *.dat

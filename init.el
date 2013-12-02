@@ -32,6 +32,10 @@
 (set-fringe-style -1)
 (tooltip-mode -1)
 
+(setq-default cursor-type '(bar . 1))
+
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Bigger Initial frame
 (add-to-list 'default-frame-alist '(height . 55))
 (add-to-list 'default-frame-alist '(width . 200))
@@ -52,6 +56,8 @@
 (setq ns-command-modifier 'meta)
 
 (setq x-select-enable-clipboard t)
+
+(set-face-background 'cursor "white")
 
 (require 'functions)
 (require 'init-package)

@@ -2,7 +2,7 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/")
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
 
@@ -30,7 +30,9 @@
                       auto-complete
                       helm-themes
                       multiple-cursors
-                      flyspell)
+                      flyspell
+                      fiplr
+                      )
  " A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

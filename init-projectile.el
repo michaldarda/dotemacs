@@ -14,4 +14,6 @@
 
 (global-set-key (kbd "M-t") 'helm-projectile)
 
+(setq projectile-completion-system 'grizzl)
+
 (provide 'init-projectile)

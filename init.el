@@ -49,7 +49,6 @@
       `((".*" ,temporary-file-directory t)))
 
 (global-linum-mode t)
-(setq linum-format " %d  ")
 (electric-pair-mode t)
 
 ;; command should be meta
@@ -62,6 +61,7 @@
 (require 'init-el-get)
 (require 'init-theme)
 (require 'init-ruby)
+(require 'init-web-mode)
 (require 'init-yasnippet)
 (require 'init-helm)
 (require 'init-yaml)
@@ -69,3 +69,5 @@
 (require 'init-projectile)
 (require 'init-auto-complete)
 (require 'multiple-cursors)
+
+(require 'grizzl)

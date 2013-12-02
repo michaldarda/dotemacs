@@ -27,6 +27,7 @@
                       auto-complete
                       helm-themes
                       multiple-cursors
+                      web-mode
                       )
   " A list of packages to ensure are installed at launch.")
 

@@ -71,3 +71,54 @@
 (require 'multiple-cursors)
 
 (require 'grizzl)
+
+(require 'chruby)
+(chruby "ruby-2.0.0-p353")
+
+
+;; Find root directory by searching for Gemfile
+(defun* get-closest-gemfile-root (&optional (file "Gemfile"))
+  (let ((root (expand-file-name "/")))
+    (loop
+     for d = default-directory then (expand-file-name ".." d)
+     if (file-exists-p (expand-file-name file d))
+     return d
+     if (equal d root)
+     return nil)))
+
+(defun find-spec-from-file ()
+  (interactive)
+  (save-excursion
+    (find-file
+     (replace-regexp-in-string
+      "\n$" ""
+      (shell-command-to-string
+       (concat "find "
+               (get-closest-gemfile-root)
+               " -type f -name "
+               (concat (substring (car (last (split-string (buffer-file-name) "/"))) 0 -3)
+                       "_spec.rb")))))))
+
+(defun rspec-format-string (&optional line-p)
+  (concat "cd %s && "
+          (when (file-directory-p "~/.rvm") "source ~/.rvm/scripts/rvm && rvm use &&")
+          "bundle exec rspec --format documentation %s"
+          (when line-p " -l %s")))
+
+(defun rspec-compile-file ()
+  (interactive)
+  (compile (format (rspec-format-string)
+                   (get-closest-gemfile-root)
+                   (file-relative-name (buffer-file-name) (get-closest-gemfile-root))
+                   ) t))
+
+(defun rspec-compile-on-line ()
+  (interactive)
+  (compile (format (rspec-format-string t)
+                   (get-closest-gemfile-root)
+                   (file-relative-name (buffer-file-name) (get-closest-gemfile-root))
+                   (line-number-at-pos)
+                   ) t))
+
+(local-set-key (kbd "C-c l") 'rspec-compile-on-line)
+(local-set-key (kbd "C-c t") 'rspec-compile-file)

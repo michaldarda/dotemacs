@@ -2,18 +2,21 @@
 
 (projectile-global-mode 1)
 
-;(setq projectile-enable-caching t)
+(setq projectile-enable-caching t)
 
-(setq projectile-globally-ignored-directories 
-      (append '(".git") projectile-globally-ignored-directories))
-(setq projectile-globally-ignored-files 
-      (append '("*.png" 
-                "*.jpeg" 
-                "*.jpg"
-                "*.tiff") projectile-globally-ignored-files))
+(global-set-key (kbd "M-t") 'projectile-find-file)
 
-(global-set-key (kbd "M-t") 'helm-projectile)
+;(setq projectile-completion-system 'grizzl)
 
-(setq projectile-completion-system 'grizzl)
+(require 'fiplr)
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "log" "tmp"))
+                            (files ("*.jpg" "*.png" "*.zip" "*~"))))
+
+(eval-after-load "grep"
+  '(progn
+     (add-to-list 'grep-find-ignored-directories ".bundle")
+     (add-to-list 'grep-find-ignored-directories "tmp")
+     (add-to-list 'grep-find-ignored-directories "coverage")
+     (add-to-list 'grep-find-ignored-directories "log")))
 
 (provide 'init-projectile)

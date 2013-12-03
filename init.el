@@ -32,7 +32,11 @@
 (set-fringe-style -1)
 (tooltip-mode -1)
 
-;(setq-default cursor-type '(bar . 1))
+(setq initial-scratch-message nil)
+(setq confirm-nonexistent-file-or-buffer nil)
+
+
+(setq-default cursor-type '(bar . 1))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -63,7 +67,8 @@
 (require 'init-ruby)
 (require 'init-web-mode)
 (require 'init-yasnippet)
-(require 'init-helm)
+(require 'init-ido)
+(require 'init-idomenu)
 (require 'init-yaml)
 (require 'init-sml)
 (require 'init-projectile)
@@ -122,3 +127,17 @@
 
 (local-set-key (kbd "C-c l") 'rspec-compile-on-line)
 (local-set-key (kbd "C-c t") 'rspec-compile-file)
+
+(require 'ido-vertical-mode)
+(ido-mode 1)
+(ido-vertical-mode 1)
+
+(defun font-lock-comment-annotations ()
+  "Highlight a bunch of well known comment annotations.
+This functions should be added to the hooks of major modes for programming."
+  (font-lock-add-keywords
+   nil '(("\\<\\(FIX\\(ME\\)?\\|TODO\\|OPTIMIZE\\|HACK\\|REFACTOR\\):"
+          1 font-lock-warning-face t))))
+(add-hook 'prog-mode-hook 'font-lock-comment-annotations)
+
+(setq left-margin-width 10)

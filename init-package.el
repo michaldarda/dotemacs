@@ -13,8 +13,10 @@
                       twilight-theme
                       yasnippet
                       magit
-                      helm
-                      helm-projectile
+                      ido
+                      idomenu
+                      fiplr
+                      smex
                       inf-ruby
                       ruby-compilation
                       enh-ruby-mode
@@ -24,10 +26,10 @@
                       rspec-mode
                       coffee-mode
                       projectile
-                      auto-complete
-                      helm-themes
+                      auto-complete              
                       multiple-cursors
                       web-mode
+                      ido-vertical-mode
                       )
   " A list of packages to ensure are installed at launch.")
 

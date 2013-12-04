@@ -73,7 +73,7 @@
 (require 'init-sml)
 (require 'init-projectile)
 (require 'init-auto-complete)
-(require 'multiple-cursors)
+(require 'init-multiple-cursors)
 
 (require 'grizzl)
 

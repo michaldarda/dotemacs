@@ -14,7 +14,8 @@
                       magit
                       ido
                       idomenu
-                      grizzl
+                      ido-vertical-mode
+                      flx-ido-mode
                       smex
                       inf-ruby
                       ruby-compilation
@@ -26,10 +27,7 @@
                       coffee-mode
                       projectile
                       auto-complete              
-                      multiple-cursors
-                      web-mode
-                      ido-vertical-mode
-                      )
+                      multiple-cursors)
   " A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

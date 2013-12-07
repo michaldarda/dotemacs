@@ -10,4 +10,8 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
+(require 'ido-vertical-mode)
+(ido-mode 1)
+(ido-vertical-mode 1)
+
 (provide 'init-ido)

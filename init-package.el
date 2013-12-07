@@ -10,12 +10,11 @@
   (package-refresh-contents))
 
 (defvar my-packages '(
-                      twilight-theme
                       yasnippet
                       magit
                       ido
                       idomenu
-                      fiplr
+                      grizzl
                       smex
                       inf-ruby
                       ruby-compilation

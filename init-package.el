@@ -15,7 +15,7 @@
                       ido
                       idomenu
                       ido-vertical-mode
-                      flx-ido-mode
+                      flx-ido
                       smex
                       inf-ruby
                       ruby-compilation

@@ -36,6 +36,8 @@
 (electric-pair-mode t)
 (setq ns-command-modifier 'meta)
 (setq x-select-enable-clipboard t)
+(setq show-trailing-whitespace t)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (require 'functions)
 (require 'init-package)
@@ -50,3 +52,5 @@
 (require 'init-auto-complete)
 (require 'init-multiple-cursors)
 (require 'init-treetop)
+
+(exec-path-from-shell-initialize)

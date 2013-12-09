@@ -3,8 +3,15 @@
 (require 'rspec-mode)
 (require 'rhtml-mode)
 
-(require 'chruby)
-(chruby "ruby-2.0.0-p353")
+;; Setting rbenv path
+(setenv "PATH" (concat (getenv "HOME") "/.rubies/ruby-2.0.0-p353/bin:" (getenv "HOME") "/.gem/ruby/2.0.0/bin:" (getenv "PATH")))
+(setq exec-path (cons (concat (getenv "HOME") "/.rubies/ruby-2.0.0-p353") (cons (concat (getenv "HOME") "/.gem/ruby/2.0.0/bin") exec-path)))
+
+(setq GEM_HOME "/Users/michal/.gem/ruby/2.0.0")
+(setq RUBY_ROOT "/Users/michal/.rubies/ruby-2.0.0-p353")
+(setq RUBY_ENGINE "ruby")
+(setq RUBY_VERSION "2.0.0")
+(setq GEM_ROOT "/Users/michal/.rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0")
 
 (setq enh-ruby-program "~/.rubies/ruby-2.0.0-p353/bin/ruby")
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
@@ -62,5 +69,7 @@
 
 (local-set-key (kbd "C-c l") 'rspec-compile-on-line)
 (local-set-key (kbd "C-c t") 'rspec-compile-file)
+
+(setq inf-ruby-default-implementation "pry")
 
 (provide 'init-ruby)

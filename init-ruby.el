@@ -23,6 +23,8 @@
 (add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
 
+(add-to-list 'auto-mode-alist '("\\spec.rb$" . ruby-mode))
+
 ;; Find root directory by searching for Gemfile
 (defun* get-closest-gemfile-root (&optional (file "Gemfile"))
   (let ((root (expand-file-name "/")))

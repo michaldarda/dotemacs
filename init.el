@@ -33,11 +33,14 @@
 (setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 (global-linum-mode t)
+
 (electric-pair-mode t)
 (setq ns-command-modifier 'meta)
 (setq x-select-enable-clipboard t)
 (setq show-trailing-whitespace t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(setq-default left-fringe-width  10)
 
 (require 'functions)
 (require 'init-package)

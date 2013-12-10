@@ -18,6 +18,7 @@
                       flx-ido
                       smex
                       inf-ruby
+                      exec-path-from-shell
                       ruby-compilation
                       enh-ruby-mode
                       flymake-ruby
@@ -26,7 +27,7 @@
                       rspec-mode
                       coffee-mode
                       projectile
-                      auto-complete              
+                      auto-complete
                       multiple-cursors)
   " A list of packages to ensure are installed at launch.")
 
